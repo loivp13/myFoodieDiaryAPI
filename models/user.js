@@ -41,13 +41,6 @@ const userSchema = new mongoose.Schema(
       data: String,
       default: "",
     },
-    categories: [
-      {
-        type: ObjectId,
-        ref: "Category",
-        require: true,
-      },
-    ],
   },
   { timestamps: true }
 );

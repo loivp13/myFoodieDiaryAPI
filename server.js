@@ -22,6 +22,10 @@ const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const categoryRoutes = require("./routes/category");
 const linkRoutes = require("./routes/link");
+const listRoutes = require("./routes/list");
+const restaurantRoutes = require("./routes/restaurant");
+const itemRoutes = require("./routes/item");
+const shareLinkRoutes = require("./routes/shareLink");
 
 //app middlewares
 app.use(morgan("dev"));
@@ -35,6 +39,10 @@ app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", linkRoutes);
+app.use("/api", listRoutes);
+app.use("/api", restaurantRoutes);
+app.use("/api", itemRoutes);
+app.use("/api", shareLinkRoutes);
 
 const port = process.env.PORT || 8000;
 

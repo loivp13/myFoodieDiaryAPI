@@ -12,11 +12,12 @@ const { userUpdateValidator } = require("../validators/auth");
 const { runValidation } = require("../validators");
 
 //IMPORT CONTROLLERS
-const { read, update } = require("../controllers/user");
+const { read, update, getStatistic } = require("../controllers/user");
 
 //routes
 router.get("/user", requireSignin, authMiddleware, read);
 router.get("/admin", requireSignin, adminMiddleware, read);
+router.get("/statistic", requireSignin, authMiddleware, getStatistic);
 router.put(
   "/user",
   userUpdateValidator,
