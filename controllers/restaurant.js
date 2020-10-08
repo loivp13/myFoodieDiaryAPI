@@ -1,6 +1,6 @@
 const Restaurant = require("../models/restaurant");
 const List = require("../models/list");
-const Item = require("../models/Item");
+const Item = require("../models/item");
 
 const slugify = require("slugify");
 const formidable = require("formidable");

@@ -1,7 +1,7 @@
 const ShareLink = require("../models/shareLink");
 const Restaurant = require("../models/restaurant");
 const List = require("../models/list");
-const Item = require("../models/Item");
+const Item = require("../models/item");
 
 exports.create = (req, res) => {
   console.log(req);

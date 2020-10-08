@@ -2,7 +2,7 @@ const User = require("../models/user");
 const Link = require("../models/link");
 const List = require("../models/list");
 const Restaurant = require("../models/restaurant");
-const Item = require("../models/Item");
+const Item = require("../models/item");
 const ShareList = require("../models/shareLink");
 
 exports.read = (req, res) => {
