@@ -32,7 +32,11 @@ app.use(morgan("dev"));
 // app.use(bodyParser.json());
 app.use(bodyParser.json({ limit: "5mb", type: "application/json" }));
 // app.use(cors());
-app.use(cors({ origin: process.env.CLIENT_URL }));
+if (process.env.PRODUCTION) {
+  app.use(cors());
+} else {
+  app.use(cors({ origin: process.env.CLIENT_URL }));
+}
 
 //middlewares
 app.use("/api", authRoutes);
